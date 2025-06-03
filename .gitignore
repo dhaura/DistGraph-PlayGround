@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+*.o
+
+# Log files
+*.log
+
+# Cmake build files
+build/
+
+# VS Code workspace files
+.vscode/
