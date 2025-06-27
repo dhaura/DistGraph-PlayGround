@@ -40,3 +40,9 @@ build/
 
 # VS Code workspace files
 .vscode/
+
+# Python virtual environments
+venv/
+
+# Output files
+/*.txt

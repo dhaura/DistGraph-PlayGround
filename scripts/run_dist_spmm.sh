@@ -14,4 +14,4 @@ export COMBLAS_ROOT=~/repos/PASSIONLab/CombBLAS
 export DISTGRAPH_ROOT=~/repos/HipGraph/forks/DistGraph
 module load intel
 
-srun -n 4 build/spmm_demo -input datasets/mnist.mtx -dataset mnist -alpha 0.5 -beta 0.5
+srun -n 2 build/spmm_demo -input-sparse datasets/spmm/sp_mat_1600.mtx -input-dense datasets/spmm/dense_mat_1600_128.csv -dataset spmm_sample_dist -output out_dense_mat -alpha 0.5 -beta 0.5
