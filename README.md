@@ -58,7 +58,9 @@ The usage of SpMM functionality is illustrated in [spmm_demo.cpp](./spmm_demo.cp
     ```cpp
     auto grid = std::unique_ptr<distblas::net::Process3DGrid>(new distblas::net::Process3DGrid(world_size, 1, 1, 1));
     ```
-  - Two scalar values: alpha and beta, which control the linear combination in the SpMM operation (i.e., C = alpha * A * B + beta * C)
+  - Two scalar values: alpha and beta
+    - `alpha`: Controls the number of selected processes involved in the computation.
+    - `beta`: Manages the overlap between computation and communication, allowing for more efficient parallel execution. 
 
 - Once the sparse and dense input matrices are set up—and an additional dense matrix is allocated to store the output (`dense_mat_output`)—the SpMM operation can be invoked as follows:
     ```cpp
